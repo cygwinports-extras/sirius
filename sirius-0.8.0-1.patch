@@ -1,0 +1,97 @@
+diff -urN -x .build -x .inst -x .sinst -x configure -x 'Makefile.in*' -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x 'intltool*' -x autom4te.cache -x '*compile' -x '*stamp' -x '*html' -x '*sgml' -x '*tmpl' -x '*txt' -x '*xml' sirius-0.8.0-orig/CYGWIN-PATCHES/README sirius-0.8.0/CYGWIN-PATCHES/README
+--- sirius-0.8.0-orig/CYGWIN-PATCHES/README	1969-12-31 18:00:00.000000000 -0600
++++ sirius-0.8.0/CYGWIN-PATCHES/README	2006-01-04 18:47:17.187500000 -0600
+@@ -0,0 +1,81 @@
++sirius
++------------------------------------------
++Sirius is a program for playing the game of othello. The program
++includes an AI (Artificial Intelligence) opponent which plays at a very
++challenging level and is actually quite hard to beat. The AI opponent's
++strength can therefore be adjusted in several ways to give you a
++suitable opponent.
++
++Runtime requirements:
++  cygwin-1.5.18-1
++  GConf2-2.12.1-1
++  gtk2-x11-runtime-2.6.10-1
++  libart_lgpl2-2.3.17-1
++  libgnome2-2.12.0.1-1
++  libgnomecanvas2-2.12.0-1
++  libgnomeui2-2.12.0-1
++
++Build requirements:
++(besides corresponding -devel packages)
++  cygwin-1.5.18-1
++  autoconf2.5-2.59-3
++  automake1.9-1.9.6-1
++  binutils-20050610-1
++  gawk-3.1.5-1
++  gcc-core-3.4.4-1
++  intltool-0.33-1
++  libtool1.5-1.5.20-2
++  make-3.80-1
++  pkgconfig-0.17.2-2
++  sed-4.1.4-1
++
++Canonical website:
++  http://sirius.bitvis.nu/
++
++-------------------------------------------
++
++Build instructions:
++  unpack sirius-0.8.0-X-src.tar.bz2
++    if you use setup to install this src package, it will be
++	 unpacked under /usr/src automatically
++  cd /usr/src
++  ./sirius-0.8.0-X.sh all
++
++This will create:
++  /usr/src/sirius-0.8.0-X-src.tar.bz2
++  /usr/src/sirius-0.8.0-X.tar.bz2
++
++-------------------------------------------
++
++Files included in the binary package:
++
++  /usr/bin/sirius.exe
++  /usr/share/applications/sirius.desktop
++  /usr/share/doc/Cygwin/sirius-0.8.0.README
++  /usr/share/doc/sirius-0.8.0/AUTHORS
++  /usr/share/doc/sirius-0.8.0/BUGS
++  /usr/share/doc/sirius-0.8.0/ChangeLog
++  /usr/share/doc/sirius-0.8.0/COPYING
++  /usr/share/doc/sirius-0.8.0/INSTALL
++  /usr/share/doc/sirius-0.8.0/NEWS
++  /usr/share/doc/sirius-0.8.0/README
++  /usr/share/locale/de/LC_MESSAGES/sirius.mo
++  /usr/share/locale/fr/LC_MESSAGES/sirius.mo
++  /usr/share/locale/ru/LC_MESSAGES/sirius.mo
++  /usr/share/locale/sv/LC_MESSAGES/sirius.mo
++  /usr/share/pixmaps/sirius/marker_classic.png
++  /usr/share/pixmaps/sirius.png
++  /usr/share/sirius/corner
++  /usr/share/sirius/edge
++  /usr/share/sirius/opening_book
++
++------------------
++
++Port Notes:
++
++----- version 0.8.0-1 -----
++Initial release for Cygwin.
++
++
++Cygwin port maintained by:
++http://cygwinports.dotsrc.org/
+diff -urN -x .build -x .inst -x .sinst -x configure -x 'Makefile.in*' -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x 'intltool*' -x autom4te.cache -x '*compile' -x '*stamp' -x '*html' -x '*sgml' -x '*tmpl' -x '*txt' -x '*xml' sirius-0.8.0-orig/CYGWIN-PATCHES/setup.hint sirius-0.8.0/CYGWIN-PATCHES/setup.hint
+--- sirius-0.8.0-orig/CYGWIN-PATCHES/setup.hint	1969-12-31 18:00:00.000000000 -0600
++++ sirius-0.8.0/CYGWIN-PATCHES/setup.hint	2006-01-04 18:47:17.187500000 -0600
+@@ -0,0 +1,8 @@
++category: Gnome Games
++requires: cygwin GConf2 gtk2-x11-runtime libart_lgpl2 libgnome2 libgnomecanvas2 libgnomeui2 xorg-x11-base
++sdesc: "GNOME othello game with challening AI"
++ldesc: "Sirius is a program for playing the game of othello. The program
++includes an AI (Artificial Intelligence) opponent which plays at a very
++challenging level and is actually quite hard to beat. The AI opponent's
++strength can therefore be adjusted in several ways to give you a
++suitable opponent."
